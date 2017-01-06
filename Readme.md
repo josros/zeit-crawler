@@ -3,7 +3,7 @@
 This [Scrapy](https://scrapy.org/) crawler retrieves latest articles from [zeit-online](http://www.zeit.de/index).
 In its pipeline, it drops irrelevant articles and performs an article based word count.
 
-Finally it exports article information structured as the following json:
+Finally, it exports article information structured as shown in the following json:
 
 ```json
 {
