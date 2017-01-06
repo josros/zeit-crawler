@@ -17,3 +17,4 @@ class ZeitArticleItem(scrapy.Item):
     body = scrapy.Field()
     subheaders = scrapy.Field()
     tags = scrapy.Field()
+    wordcount = scrapy.Field()

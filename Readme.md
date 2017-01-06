@@ -1,8 +1,9 @@
 # zeit-crawler
 
 This [Scrapy](https://scrapy.org/) crawler retrieves latest articles from [zeit-online](http://www.zeit.de/index).
+In its pipeline, it drops irrelevant articles and performs an article based word count.
 
-An article obtained by this crawler is structured as follows:
+Finally it exports article information structured as the following json:
 
 ```json
 {
@@ -16,6 +17,11 @@ An article obtained by this crawler is structured as follows:
     "Arbeitszeit",
     "<more tags>"
   ],
+  "wordcount": {
+    "verkürzen": 1,
+    "arbeitsministerin": 2,
+    "rückkehr": 2
+  },
   "subheaders": [
     "Varianten zum Achtstundentag"
   ],
@@ -43,9 +49,4 @@ An article obtained by this crawler is structured as follows:
 Run:
 `
 scrapy crawl zeit
-`
-
-Run with json file output:
-`
-scrapy crawl zeit -o articles.json
 `
